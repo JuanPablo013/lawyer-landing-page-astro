@@ -1,0 +1,70 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import ContactUs from '~/components/widgets/Contact.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+
+const metadata = {
+  title: 'Contacto - HDOAbogados',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- HeroText Widget ******************* -->
+
+  <HeroText tagline="Contacto" title="¡Hablemos de tu caso!" />
+
+  <ContactUs
+    id="contacto"
+    title="¿Necesitas asesoría legal?"
+    subtitle="Déjame tus datos y te contacto en menos de 24 horas"
+    inputs={[
+      { type: 'text', name: 'name', label: 'Nombre completo' },
+      { type: 'email', name: 'email', label: 'Correo electrónico' },
+      { type: 'tel', name: 'phone', label: 'Teléfono/WhatsApp' },
+      { type: 'select', name: 'service', label: 'Tipo de servicio' },
+      { type: 'textarea', name: 'message', label: 'Cuéntame tu caso' },
+    ]}
+    disclaimer={{
+      label:
+        'Al enviar este formulario de contacto, usted reconoce y acepta la recopilación de su información personal.',
+    }}
+    button="Enviar consulta"
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Estoy aquí para ayudarte"
+    items={[
+      {
+        title: 'Primera consulta gratuita',
+        description: 'Evalúo tu caso sin compromiso para darte claridad sobre tus opciones legales.',
+      },
+      {
+        title: 'Respuesta rápida',
+        description: 'Respondo en menos de 24 horas. Tu caso es urgente para mí y te daré una respuesta oportuna.',
+      },
+      {
+        title: 'Atención personalizada',
+        description:
+          'Hablas directamente conmigo, no con asistentes. Recibirás atención profesional y cercana en cada etapa.',
+      },
+      {
+        title: 'WhatsApp',
+        description: '+57 322 760 1479',
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        title: 'Email',
+        description: 'contacto@hdoabogados.com',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Ubicación',
+        description: 'Ibagué, Colombia',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+</Layout>

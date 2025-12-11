@@ -1,0 +1,425 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Contact from '~/components/widgets/Contact.astro';
+import Map from '~/components/widgets/Map.astro';
+// import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'HDOAbogados',
+  ignoreTitleTemplate: true,
+};
+
+const siteUrl = Astro.url.origin;
+const timestamp = new Date().toISOString();
+const subject = `Nuevo contacto - HDO Abogados - ${timestamp}`;
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Agenda tu consulta',
+        href: 'https://wa.me/573227601479?text=Hola,%20tengo%20una%20consulta',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+      { text: 'Conoce mis servicios', href: '#servicios' },
+    ]}
+  >
+    <Fragment slot="title"> Asesoría legal clara, honesta y efectiva en Colombia. </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        Muchas gracias por visitar mi página. Estoy aquí para escucharte, orientarte y defenderte con transparencia y
+        compromiso, brindándote soluciones legales efectivas y accesibles.</span
+      >
+      <!-- <span class="block mb-1 sm:hidden font-bold text-blue-600">HDOAbogados: Production-ready.</span>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis enim autem mollitia libero maiores? Beatae expedita rem ut, sunt, natus tempore vitae ad voluptate nihil corrupti repellat distinctio commodi quidem. -->
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features2
+    id="caracteristicas"
+    title="¿Por qué confiar en HDO Abogados?"
+    subtitle="Características que nos diferencian"
+    items={[
+      {
+        title: 'Primera consulta sin costo',
+        description: 'Evalúo tu caso sin compromiso para darte claridad sobre tus opciones.',
+        icon: 'tabler:gift',
+      },
+      {
+        title: 'Vocación de Prosperidad',
+        description: 'Actúo con rigor y honestidad: le diré claramente si su caso es jurídicamente viable.',
+        icon: 'tabler:check',
+      },
+      {
+        title: 'Precios claros desde el inicio',
+        description: 'Sin sorpresas. Conocerás los costos antes de iniciar.',
+        icon: 'tabler:credit-card',
+      },
+      {
+        title: 'Atención personalizada',
+        description: 'Tú hablas directamente conmigo, no con asistentes.',
+        icon: 'tabler:user-heart',
+      },
+      {
+        title: 'Seguimiento constante',
+        description: 'Te mantengo informado en cada etapa de tu proceso.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Experiencia',
+        description: 'Gracias a mi experiencia, ofrezco acompañamiento eficaz orientado a resultados.',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <Features
+    id="servicios"
+    tagline="Servicios"
+    title="Áreas de práctica"
+    subtitle="Te ofrecemos los siguientes servicios"
+    items={[
+      {
+        title: 'Insolvencias Económicas',
+        description:
+          'A través de este proceso recuperarás el control de tu salario, reorganizarás tus deudas y propondrás acuerdos de pago con tus acreedores basado en tu disponibilidad económica.',
+        icon: 'tabler:currency-dollar',
+      },
+      {
+        title: 'Derecho Penal',
+        description: 'Te represento con profesionalismo y ética en tus casos penales.',
+        icon: 'tabler:swords',
+      },
+      {
+        title: 'Derecho Laboral',
+        description:
+          'Te apoyo en reclamaciones laborales, despidos injustificados, liquidaciones, acoso laboral, pensiones y otros conflictos entre trabajadores y empleadores.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Derecho Civil',
+        description:
+          'Soluciones para conflictos contractuales, arrendamientos, deudas, responsabilidad civil, sucesiones y otros asuntos entre particulares.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Conciliaciones',
+        description:
+          'Asesoría y representación en procesos de conciliación para resolver conflictos de manera rápida, efectiva y evitando llegar a instancias judiciales innecesarias.',
+        icon: 'tabler:heart-handshake',
+      },
+      {
+        title: 'Derecho Administrativo',
+        description:
+          'Acompañamiento en trámites y recursos frente a entidades públicas, sanciones administrativas, procesos disciplinarios y defensa ante la administración.',
+        icon: 'tabler:building',
+      },
+      {
+        title: 'Comparendos',
+        description:
+          'Te ayudo a impugnar comparendos de tránsito, revisar irregularidades en el proceso y defender tus derechos ante las autoridades de movilidad.',
+        icon: 'tabler:motorbike',
+      },
+      {
+        title: 'Derechos de petición, tutelas, desacatos',
+        description:
+          'Realizo tus peticiones, quejas, reclamos, solicitudes y sugerencias ante cualquier entidad administrativa buscando obtener respuestas rapidas.',
+        icon: 'tabler:thumb-up',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    id="sobre-mi"
+    tagline="Sobre mí"
+    title="Conoce un poco sobre mi vocación y el compromiso que tengo de servir y ayudar a los demás."
+    items={[
+      {
+        title: 'Experiencia y vocación',
+        description:
+          'Desde que cursaba 5 semestre de derecho tuve la oportunidad de hacer parte de un despacho de abogados de la defensoria publica',
+      },
+      {
+        title: 'Atención cercana y transparente',
+        description:
+          'Trabajo con total seriedad y profesionalismo, con la convicción de que un servicio legal debe ser justo, claro y accesible para todos.',
+      },
+      {
+        title: 'Honestidad y precios razonables',
+        description:
+          'Aquí encontrarás claridad en la información, trato honesto y precios razonables, sin sorpresas ni complicaciones.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/David Ortiz.jpg',
+      alt: 'Abogado David Ortiz',
+    }}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <!-- <Stats
+    title="Experiencia que respalda"
+    stats={[
+      { title: 'Años de experiencia', amount: '5+' },
+      { title: 'Casos resueltos', amount: '100+' },
+      { title: 'Clientes satisfechos', amount: '50+' },
+    ]}
+  /> -->
+
+  <!-- Steps Widget ****************** -->
+
+  <Steps
+    id="como-trabajamos"
+    title="¿Cómo trabajamos tu caso?"
+    subtitle="Proceso claro y transparente en 4 pasos"
+    items={[
+      {
+        title: 'Paso 1: <span class="font-medium">Consulta inicial</span>',
+        description: 'Agendas una cita gratuita, me cuentas tu situación. Evalúo tu caso y te doy opciones reales.',
+        icon: 'tabler:message-circle',
+      },
+      {
+        title: 'Paso 2: <span class="font-medium">Estrategia legal</span>',
+        description: 'Diseño la mejor estrategia para tu caso y te explico los costos, tiempos y posibilidades.',
+        icon: 'tabler:checklist',
+      },
+      {
+        title: 'Paso 3: <span class="font-medium">Ejecución</span>',
+        description: 'Inicio las acciones legales necesarias. Te mantengo informado en cada paso.',
+        icon: 'tabler:briefcase',
+      },
+      {
+        title: 'Paso 4: <span class="font-medium">Solución</span>',
+        description: 'Logramos el mejor resultado posible para tu caso.',
+        icon: 'tabler:trophy',
+      },
+      {
+        title: 'Ready!',
+        icon: 'tabler:check',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      alt: 'Steps image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <!-- <Features2
+    title="Most used widgets"
+    subtitle="Provides frequently used components for building websites using Tailwind CSS"
+    tagline="Components"
+    items={[
+      {
+        title: 'Headers',
+        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
+        icon: 'flat-color-icons:template',
+      },
+      {
+        title: 'Heros',
+        description:
+          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
+        icon: 'flat-color-icons:gallery',
+      },
+      {
+        title: 'Features',
+        description:
+          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
+        icon: 'flat-color-icons:approval',
+      },
+      {
+        title: 'Content',
+        description:
+          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
+        icon: 'flat-color-icons:document',
+      },
+      {
+        title: 'Call-to-Action',
+        description:
+          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
+        icon: 'flat-color-icons:advertising',
+      },
+      {
+        title: 'Pricing',
+        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
+        icon: 'flat-color-icons:currency-exchange',
+      },
+      {
+        title: 'Testimonial',
+        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
+        icon: 'flat-color-icons:voice-presentation',
+      },
+      {
+        title: 'Contact',
+        description:
+          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
+        icon: 'flat-color-icons:business-contact',
+      },
+      {
+        title: 'Footers',
+        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
+        icon: 'flat-color-icons:database',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2> -->
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    id="preguntas"
+    title="Preguntas frecuentes"
+    subtitle="Conoce las preguntas más frecuentes sobre mi trabajo."
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: '¿Cuánto cuesta la consulta inicial?',
+        description:
+          'La primera consulta es gratuita. En ella evaluamos tu caso y te indico si tu proceso tiene vocación de éxito.',
+      },
+      {
+        title: '¿Cómo funciona el pago de honorarios?',
+        description: 'Te ofrezco una forma de pago accesible a tu bolsillo con la facilidad de pago a cuotas.',
+      },
+      {
+        title: '¿Qué necesito para la primera cita?',
+        description:
+          'Ten a la mano la documentación que tengas sobre tu caso, esto para revisar la viabilidad de tu proceso.',
+      },
+      {
+        title: '¿Atienden casos en toda Colombia?',
+        description: 'Sí, puedo atender casos en todo el país. También ofrezco asesoría virtual cuando sea necesario.',
+      },
+    ]}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  /> -->
+
+  <!-- Contact Widget **************** -->
+
+  <Contact
+    id="contacto"
+    title="¿Necesitas asesoría legal?"
+    subtitle="Déjame tus datos y te contacto en menos de 24 horas"
+    action="https://formsubmit.co/hdortizv@ut.edu.co"
+    method="POST"
+    inputs={[
+      { type: 'hidden', name: '_next', value: `${siteUrl}/success` },
+      { type: 'hidden', name: '_subject', value: subject },
+      { type: 'hidden', name: '_template', value: 'table' },
+      { type: 'hidden', name: '_captcha', value: 'false' },
+      { type: 'text', name: 'name', label: 'Nombre completo', required: true },
+      { type: 'email', name: 'email', label: 'Correo electrónico', required: true },
+      { type: 'tel', name: 'phone', label: 'Teléfono/WhatsApp', required: true },
+    ]}
+    textarea={{
+      label: 'Cuéntame tu caso',
+      name: 'message',
+    }}
+    disclaimer={{
+      label:
+        'Al enviar este formulario de contacto, usted reconoce y acepta la recopilación de su información personal.',
+    }}
+    button="Agenda una consulta"
+  />
+
+  <Features2
+    title="Estoy aquí para ayudarte"
+    items={[
+      {
+        title: 'Primera consulta gratuita',
+        description: 'Evalúo tu caso sin compromiso para darte claridad sobre tus opciones legales.',
+      },
+      {
+        title: 'Respuesta rápida',
+        description: 'Respondo en menos de 24 horas. Tu caso es urgente para mí y te daré una respuesta oportuna.',
+      },
+      {
+        title: 'Atención personalizada',
+        description:
+          'Hablas directamente conmigo, no con asistentes. Recibirás atención profesional y cercana en cada etapa.',
+      },
+      {
+        title: 'WhatsApp',
+        description: '+57 322 760 1479',
+        icon: 'tabler:brand-whatsapp',
+      },
+      {
+        title: 'Email',
+        description: 'hdortizv@ut.edu.co',
+        icon: 'tabler:mail',
+      },
+      {
+        title: 'Ubicación',
+        description: 'Ibagué, Colombia',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+
+  <Map
+    id="ubicacion"
+    title="Ubicación"
+    subtitle="Estamos ubicados en Ibagué, Tolima. Atendemos casos en todo el país."
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Agenda tu consulta',
+        href: 'https://wa.me/573227601479?text=Hola,%20tengo%20una%20consulta',
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Agenda tu consulta&nbsp;con&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap"
+        >David Ortiz</span
+      >
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Estoy listo para escucharte y ayudarte con tu caso. <br class="hidden md:inline" />Contáctame por WhatsApp o
+      completa el formulario de contacto.
+    </Fragment>
+  </CallToAction>
+</Layout>
