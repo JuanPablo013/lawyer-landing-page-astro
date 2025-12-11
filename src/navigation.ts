@@ -50,7 +50,11 @@ export const footerData = {
   socialLinks: [
     { ariaLabel: 'WhatsApp', icon: 'tabler:brand-whatsapp', href: 'https://wa.me/573227601479' },
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/davidortiz.edil' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: 'https://www.facebook.com/profile.php?id=61581684031861' },
+    {
+      ariaLabel: 'Facebook',
+      icon: 'tabler:brand-facebook',
+      href: 'https://www.facebook.com/profile.php?id=61581684031861',
+    },
   ],
   footNote: `
     © ${new Date().getFullYear()} HDO Abogados — Todos los derechos reservados.
