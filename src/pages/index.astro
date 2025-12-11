@@ -9,8 +9,8 @@ import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Contact from '~/components/widgets/Contact.astro';
 import Map from '~/components/widgets/Map.astro';
-// import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import { YouTube } from 'astro-embed';
 
 const metadata = {
   title: 'HDOAbogados',
@@ -44,8 +44,6 @@ const subject = `Nuevo contacto - HDO Abogados - ${timestamp}`;
         Muchas gracias por visitar mi página. Estoy aquí para escucharte, orientarte y defenderte con transparencia y
         compromiso, brindándote soluciones legales efectivas y accesibles.</span
       >
-      <!-- <span class="block mb-1 sm:hidden font-bold text-blue-600">HDOAbogados: Production-ready.</span>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis enim autem mollitia libero maiores? Beatae expedita rem ut, sunt, natus tempore vitae ad voluptate nihil corrupti repellat distinctio commodi quidem. -->
     </Fragment>
   </Hero>
 
@@ -169,24 +167,23 @@ const subject = `Nuevo contacto - HDO Abogados - ${timestamp}`;
           'Aquí encontrarás claridad en la información, trato honesto y precios razonables, sin sorpresas ni complicaciones.',
       },
     ]}
-    image={{
-      src: '~/assets/images/David Ortiz.jpg',
-      alt: 'Abogado David Ortiz',
-    }}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Content>
 
-  <!-- <Stats
-    title="Experiencia que respalda"
-    stats={[
-      { title: 'Años de experiencia', amount: '5+' },
-      { title: 'Casos resueltos', amount: '100+' },
-      { title: 'Clientes satisfechos', amount: '50+' },
-    ]}
-  /> -->
+    <Fragment slot="image">
+      <div class="relative h-0 pb-[56.25%]">
+        <YouTube id="gxBkghlglTg" title="Presentación HDO Abogados" />
+      </div>
+      <style is:inline>
+        lite-youtube {
+          margin: 0 auto;
+          max-width: 100%;
+        }
+      </style>
+    </Fragment>
+  </Content>
 
   <!-- Steps Widget ****************** -->
 
@@ -226,70 +223,6 @@ const subject = `Nuevo contacto - HDO Abogados - ${timestamp}`;
     }}
   />
 
-  <!-- Features2 Widget ************** -->
-
-  <!-- <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2> -->
-
   <!-- FAQs Widget ******************* -->
 
   <FAQs
@@ -318,17 +251,6 @@ const subject = `Nuevo contacto - HDO Abogados - ${timestamp}`;
       },
     ]}
   />
-
-  <!-- Stats Widget ****************** -->
-
-  <!-- <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
-    ]}
-  /> -->
 
   <!-- Contact Widget **************** -->
 
@@ -386,7 +308,7 @@ const subject = `Nuevo contacto - HDO Abogados - ${timestamp}`;
       },
       {
         title: 'Ubicación',
-        description: 'Ibagué, Colombia',
+        description: 'Ibagué, Colombia <br> Calle 9 #1-124, oficina 207, frente al palacio justicia',
         icon: 'tabler:map-pin',
       },
     ]}

@@ -6,8 +6,8 @@ export const headerData = {
     { text: 'Servicios', href: getPermalink('/#servicios') },
     { text: 'Sobre mí', href: getPermalink('/#sobre-mi') },
     { text: 'Preguntas Frecuentes', href: getPermalink('/#preguntas') },
-    { text: 'Ubicación', href: getPermalink('/#ubicacion') },
     { text: 'Contacto', href: getPermalink('/#contacto') },
+    { text: 'Ubicación', href: getPermalink('/#ubicacion') },
   ],
   /* actions: [
     //{
@@ -38,7 +38,7 @@ export const footerData = {
       title: 'Contacto',
       links: [
         { text: 'Formulario', href: getPermalink('/#contacto') },
-        { text: 'Teléfono: +57 322 760 1479', href: 'tel:+573227601479' },
+        { text: 'Teléfono: 3227601479', href: 'tel:+573227601479' },
         { text: 'Correo: hdortizv@ut.edu.co', href: 'mailto:hdortizv@ut.edu.co' },
       ],
     },
