@@ -169,6 +169,8 @@ export interface Input {
   placeholder?: string;
   value?: string;
   required?: boolean;
+  class?: string;
+  style?: string;
 }
 
 export interface Textarea {

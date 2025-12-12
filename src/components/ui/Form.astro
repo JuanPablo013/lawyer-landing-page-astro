@@ -9,7 +9,17 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '', a
   {
     inputs &&
       inputs.map(
-        ({ type = 'text', name, label = '', autocomplete = 'on', placeholder = '', value = '', required = false }) =>
+        ({
+          type = 'text',
+          name,
+          label = '',
+          autocomplete = 'on',
+          placeholder = '',
+          value = '',
+          required = false,
+          class: className = '',
+          style = '',
+        }) =>
           name && (
             <div class={type !== 'hidden' ? 'mb-6' : undefined}>
               {label && (
@@ -28,8 +38,9 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '', a
                 class={
                   type !== 'hidden'
                     ? 'py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900'
-                    : undefined
+                    : `hidden ${className}`
                 }
+                style={style}
               />
             </div>
           )
@@ -93,4 +104,7 @@ const { inputs, textarea, disclaimer, button = 'Contact us', description = '', a
       </div>
     )
   }
+
+  <!-- Mensaje de resultado (oculto por defecto) -->
+  <div id="form-result" class="mt-4 hidden p-4 rounded-lg text-sm text-center font-medium"></div>
 </form>
