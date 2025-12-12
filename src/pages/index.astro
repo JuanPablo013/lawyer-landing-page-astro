@@ -11,9 +11,12 @@ import Contact from '~/components/widgets/Contact.astro';
 import Map from '~/components/widgets/Map.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import { YouTube } from 'astro-embed';
+import stepsImage from '~/assets/images/tingey-injury-law-firm-L4YGuSg0fxs-unsplash.jpg';
 
 const metadata = {
-  title: 'HDOAbogados',
+  title: 'HDO Abogados | Asesoría Legal e Insolvencias en Ibagué',
+  description:
+    'Abogado en Ibagué experto en Insolvencias, Derecho Penal, Laboral y Civil. David Ortiz ofrece asesoría legal honesta y primera consulta gratuita. Soluciones efectivas en todo el país.',
   ignoreTitleTemplate: true,
 };
 
@@ -218,7 +221,7 @@ const subject = `Nuevo contacto - HDO Abogados - ${timestamp}`;
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
+      src: stepsImage,
       alt: 'Steps image',
     }}
   />
