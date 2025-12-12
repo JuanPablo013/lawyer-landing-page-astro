@@ -18,7 +18,7 @@ metadata:
   openGraph:
     site_name: HDO Abogados
     images:
-      - url: '~/assets/images/hero-image.png'
+      - url: '~/assets/images/logo.png'
         width: 1200
         height: 628
     type: website
