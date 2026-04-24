@@ -49,7 +49,7 @@ export const footerData = {
   ],
   socialLinks: [
     { ariaLabel: 'WhatsApp', icon: 'tabler:brand-whatsapp', href: 'https://wa.me/573227601479' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/davidortiz.edil' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/hdavidortizv' },
     {
       ariaLabel: 'Facebook',
       icon: 'tabler:brand-facebook',
